@@ -19,13 +19,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a href="#">Главная</a>
+            <a class="site-list__link--main" href="#">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link--catalog" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a class="site-list__link--form" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -37,7 +37,7 @@
       <h1 class="info__header">Функциональное питание для котов</h1>
       <p class="info__slogan">Занялся собой? Займись котом!</p>
       <img src="https://via.placeholder.com" width="280" height="270" alt="Изображение товара Cat Energy Pro с курицей">
-      <a href="form.html">Подобрать программу</a>
+      <a class="info__button" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="programs">
@@ -74,7 +74,7 @@
       <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
         Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
         в день.</p>
-      <div class="stats">
+      <div class="example__stats stats">
         <dl class="stats__list">
           <div class="stats__item">
             <dt class="stats__number">5 кг</dt>
@@ -85,17 +85,15 @@
             <dd class="stats__text">Затрачено времени</dd>
           </div>
         </dl>
-      </div>
-      <div class="sum">
-        <p class="sum__text">Затраты на питание: 15 000 РУБ.</p>
-      </div>
-      <img src="https://via.placeholder.com" width="311" height="232" alt="Изменения кота после курса питания">
-      <div class="range">
-        <span class="range__text range__text--before">Было</span>
-        <div>
-          <input type="range">
+        <p class="stats__sum">Затраты на питание: 15 000 РУБ.</p>
+        <img src="https://via.placeholder.com" width="311" height="232" alt="Изменения кота после курса питания">
+        <div class="range">
+          <button class="range__text range__text--before" type="button">Было</button>
+          <div>
+            <input type="range">
+          </div>
+          <button class="range__text range__text--after" type="button">Стало</button>
         </div>
-        <spa class="range__text range__text--after">Стало</spa>
       </div>
     </section>
   </main>
@@ -113,7 +111,7 @@
     <div class="logo">
       <img src="https://via.placeholder.com" width="128" height="24" alt="Логотип Cat Energy">
     </div>
-    <ul class="socials socials__list">
+    <ul class="footer__list socials">
       <li class="socials__item">
         <a class="socials__link socials__link--vk" href="#" aria-label="Vkontakte"></a>
       </li>
