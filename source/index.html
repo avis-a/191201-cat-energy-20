@@ -6,10 +6,10 @@
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body">
+<body class="page">
 
-  <header class="page-header">
-    <a href="" class="page-header__logo">
+  <header class="page__header">
+    <a class="page__logo" href="#">
       <img src="https://via.placeholder.com" width="190" height="38" alt="Логотип Car Energy">
     </a>
     <nav class="main-nav">
@@ -19,25 +19,25 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link--main" href="#">Главная</a>
+            <a class="site-list__link" href="#">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link--catalog" href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link--form" href="form.html">Подбор программы</a>
+            <a class="site-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="page-main">
+  <main class="page__main">
     <section class="info">
       <h1 class="info__header">Функциональное питание для котов</h1>
       <p class="info__slogan">Занялся собой? Займись котом!</p>
       <img src="https://via.placeholder.com" width="280" height="270" alt="Изображение товара Cat Energy Pro с курицей">
-      <a class="info__button" href="form.html">Подобрать программу</a>
+      <a class="info__button button" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="programs">
@@ -85,7 +85,9 @@
             <dd class="stats__text">Затрачено времени</dd>
           </div>
         </dl>
-        <p class="stats__sum">Затраты на питание: 15 000 РУБ.</p>
+        <div class="stats__sum">
+          <p>Затраты на питание: 15 000 РУБ.</p>
+        </div>
         <img src="https://via.placeholder.com" width="311" height="232" alt="Изменения кота после курса питания">
         <div class="range">
           <button class="range__text range__text--before" type="button">Было</button>
@@ -98,7 +100,7 @@
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page__footer">
     <div class="contacts">
       <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
       <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -111,7 +113,7 @@
     <div class="logo">
       <img src="https://via.placeholder.com" width="128" height="24" alt="Логотип Cat Energy">
     </div>
-    <ul class="footer__list socials">
+    <ul class="socials">
       <li class="socials__item">
         <a class="socials__link socials__link--vk" href="#" aria-label="Vkontakte"></a>
       </li>
