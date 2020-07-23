@@ -33,6 +33,93 @@
   </header>
 
   <main>
+    <section class="page__form">
+      <h1 class="page__title">Подбор программы</h1>
+      <p class="page__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="form" action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset class="form__fieldset">
+          <legend class="form__title visually-hidden">Данные питомца</legend>
+          <p class="form__row">
+            <label class="form__label form__label--text" for="name">Имя&#58;&#42;</label>
+            <input class="form__control form__control--text" id="name" type="text" name="name" placeholder="Барсик">
+          </p>
+          <p class="form__row">
+            <label class="form__label form__label--text" for="weight">Вес &#40;кг&#41;&#58;&#42;</label>
+            <input class="form__control form__control--text" id="weight" type="text" name="weight" placeholder="7">
+          </p>
+          <p class="form__row">
+            <label class="form__label form__label--text" for="age">Возраст &#40;лет&#41;&#58;</label>
+            <input class="form__control form__control--text" id="age" type="text" name="age" placeholder="7">
+          </p>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__title visually-hidden">Выбор программы</legend>
+          <ul class="form__list">
+            <li class="form__row">
+              <input class="form__control form__control--radio" id="radio-slim" type="radio" name="program" value="slim"
+                checked>
+              <label class="form__label form__label--radio" for="radio-slim">Похудение</label>
+            </li>
+            <li class="form__row">
+              <input class="form__control form__control--radio" id="radio-muscle" type="radio" name="program" value="muscle">
+              <label class="form__label form__label--radio" for="radio-muscle">Набор массы</label>
+            </li>
+            <li class="form__row">
+              <input class="form__control form__control--radio" id="radio-unknown" type="radio" name="program"
+                value="unknown">
+              <label class="form__label form__label--radio" for="radio-unknown">Не знаю &#40;Нужен ваш совет&#41;</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__title">Контактные данные (владельца кота)</legend>
+          <p class="form__row">
+            <label class="form__label form__label--text" for="email">E-mail&#58;&#42;</label>
+            <input class="form__control form__control--text" id="email" type="text" name="email"
+              placeholder="kuklachev@gmail.com">
+          </p>
+          <p class="form__row">
+            <label class="form__label form__label--text" for="tel">Телефон&#58;&#42;</label>
+            <input class="form__control form__control--text" id="tel" type="text" name="tel"
+              placeholder="8 (960) 900-60-90">
+          </p>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__title">Комментарий</legend>
+          <textarea class="form__control form__control--textarea" name="comment" cols="30"
+            rows="10">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__title">Дополнительно</legend>
+          <ul class="form__list">
+            <li class="form__row">
+              <input class="form__control form__control--checkbox" name="sweetener" id="checkbox-sweetener"
+                type="checkbox" checked>
+              <label class="form__label form__label--checkbox" for="checkbox-sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="form__row">
+              <input class="form__control form__control--checkbox" name="water" id="checkbox-water" type="checkbox">
+              <label class="form__label form__label--checkbox" for="checkbox-water">Питьевая вода</label>
+            </li>
+            <li class="form__row">
+              <input class="form__control form__control--checkbox" name="milk" id="checkbox-milk" type="checkbox">
+              <label class="form__label form__label--checkbox" for="checkbox-milk">Молоко</label>
+            </li>
+            <li class="form__row">
+              <input class="form__control form__control--checkbox" name="vitamins" id="checkbox-vitamins"
+                type="checkbox">
+              <label class="form__label form__label--checkbox" for="checkbox-vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__button" type="submit">Отправить заявку</button>
+        <small>* — Обязательные поля</small>
+      </form>
+    </section>
   </main>
 
   <footer class="page__footer">
