@@ -1,0 +1,25 @@
+.text(@font-size, @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.page {
+  .text(16px, 18px);
+  height: 100%;
+  width: 320px;
+  font-family: @main-font;
+  color: @basic_black;
+  background-color: @basic_white;
+}
+
+.page__title {
+  .text(36px, 36px);
+}
+
+.page__header {
+  height: 264px;
+}
+
+.page__footer {
+  background-color: @basic_grey;
+}
