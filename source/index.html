@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -34,13 +36,14 @@
 
   <main class="page__main">
     <section class="info">
-      <h1 class="info__header">Функциональное питание для котов</h1>
-      <p class="info__slogan">Занялся собой? Займись котом!</p>
-      <img src="https://via.placeholder.com" width="280" height="270" alt="Изображение товара Cat Energy Pro с курицей">
-      <a class="info__button button" href="form.html">Подобрать программу</a>
+      <div class="container">
+        <h1 class="info__header">Функциональное питание для котов</h1>
+        <p class="info__slogan">Занялся собой? Займись котом!</p>
+        <a class="info__button button" href="form.html">Подобрать программу</a>
+      </div>
     </section>
 
-    <section class="programs">
+    <section class="programs container">
       <div class="programs__slim">
         <h3 class="programs__title programs__title--slim">Похудение</h3>
         <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
@@ -55,7 +58,7 @@
       </div>
     </section>
 
-    <section class="description">
+    <section class="description container">
       <h2 class="description__title">Как это работает</h2>
       <ul class="description__list">
         <li class="description__item description__item--benefit">Функциональное питание содержит только полезные
@@ -70,38 +73,41 @@
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
-        в день.</p>
-      <div class="example__stats stats">
-        <dl class="stats__list">
-          <div class="stats__item">
-            <dt class="stats__number">5 кг</dt>
-            <dd class="stats__text">Снижение веса</dd>
+      <div class="container">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+          часов
+          в день.</p>
+        <div class="example__stats stats">
+          <dl class="stats__list">
+            <div class="stats__item">
+              <dt class="stats__number">5 кг</dt>
+              <dd class="stats__text">Снижение веса</dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__number">60 дней</dt>
+              <dd class="stats__text">Затрачено времени</dd>
+            </div>
+          </dl>
+          <div class="stats__sum">
+            <p>Затраты на питание: 15 000 РУБ.</p>
           </div>
-          <div class="stats__item">
-            <dt class="stats__number">60 дней</dt>
-            <dd class="stats__text">Затрачено времени</dd>
+          <img src="https://via.placeholder.com" width="311" height="232" alt="Изменения кота после курса питания">
+          <div class="range">
+            <button class="range__text range__text--before" type="button">Было</button>
+            <div>
+              <input type="range">
+            </div>
+            <button class="range__text range__text--after" type="button">Стало</button>
           </div>
-        </dl>
-        <div class="stats__sum">
-          <p>Затраты на питание: 15 000 РУБ.</p>
-        </div>
-        <img src="https://via.placeholder.com" width="311" height="232" alt="Изменения кота после курса питания">
-        <div class="range">
-          <button class="range__text range__text--before" type="button">Было</button>
-          <div>
-            <input type="range">
-          </div>
-          <button class="range__text range__text--after" type="button">Стало</button>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="page__footer">
-    <div class="contacts">
+    <div class="contacts container">
       <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
       <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </div>
