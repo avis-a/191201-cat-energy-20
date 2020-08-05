@@ -1,3 +1,49 @@
-.fake {
-  color: black;
+.form__fieldset {
+  border: none;
+}
+
+.form__title {
+  .text(24px, 26px);
+  .font-normal();
+  padding-bottom: 34px;
+}
+
+.form__label,
+.form__control {
+  color: @special_dark-grey;
+  text-transform: uppercase;
+}
+
+.form__control {
+  border: 1px solid @border_color;
+}
+
+.form__list {
+  padding-left: 0;
+}
+
+.form__row {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.form__label--radio {
+  color: @special_dark-grey-2;
+}
+
+.form__control--textarea {
+  border: 1px solid @border_color;
+}
+
+.form__label--checkbox {
+  color: @basic_black;
+}
+
+.form__button {
+  border: none;
+}
+
+.button__text {
+  .text(14px, 16px);
+  font-family: @text-font;
 }
