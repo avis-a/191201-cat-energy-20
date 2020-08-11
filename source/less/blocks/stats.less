@@ -1,3 +1,35 @@
+.stats {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stats__info {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stats__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.stats__item {
+  text-align: center;
+}
+
+.stats__item:nth-child(2) {
+  margin-left: 42px;
+}
+
 .stats__number {
   .text(24px, 24px);
   .font-normal();
@@ -6,6 +38,7 @@
 
 .stats__text {
   .text(12px, 12px);
+  margin-left: 0;
   font-family: @text-font;
   color: @special_dark-grey;
 }
@@ -13,4 +46,5 @@
 .stats__sum {
   .text(14px, 20px);
   text-transform: uppercase;
+  text-align: center;
 }

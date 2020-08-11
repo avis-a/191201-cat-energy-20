@@ -1,6 +1,18 @@
 .example {
   height: 705px;
   background-color: @dark_grey;
+
+  @media (min-width: @tablet-width) {
+    height: 619px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 134px;
+  }
 }
 
 .example__title {
@@ -12,4 +24,19 @@
   .text(14px; 18px);
   font-family: @text-font;
   color: @special_dark-grey;
+}
+
+.example__img {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }

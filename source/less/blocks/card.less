@@ -1,5 +1,16 @@
 .card {
-  height: 209px;
+  height: 190px;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 430px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 431px;
+  }
 }
 
 .card__title {
@@ -7,10 +18,12 @@
   .font-normal();
   color: @special_dark-grey-2;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .card__text {
   .text(12px, 16px);
   font-family: @text-font;
   color: @special_dark-grey;
+  text-align: center;
 }

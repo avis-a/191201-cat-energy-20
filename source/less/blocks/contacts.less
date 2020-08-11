@@ -1,8 +1,23 @@
 .contacts {
-  height: 114px;
-  background-color: @basic_white;
+  min-height: 114px;
+  display: flex;
+  flex-direction: row;
+  background-color: @basic_grey;
   padding-top: 28px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 201px;
+    background-color: @basic_white;
+  }
 }
 
 .contacts__title {
