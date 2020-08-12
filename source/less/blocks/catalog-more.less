@@ -1,6 +1,13 @@
 .catalog-more {
-  height: 209px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @basic_grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: 2px solid @basic_grey;
+  }
 }
 
 .catalog-more__title {
@@ -17,9 +24,6 @@
 }
 
 .catalog-more__button {
-  display: block;
-  width: 279px;
-  height: 40px;
   background-color: @basic_grey;
   text-transform: uppercase;
   color: @special_dark-grey;

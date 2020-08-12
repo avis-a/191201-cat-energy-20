@@ -23,9 +23,34 @@
 .page__header {
   height: 264px;
   .text(20px; 20px);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page__logo {
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 59px;
+  }
 }
 
 .page__footer {
   height: 712px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    height: 635px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 549px;
+  }
 }
