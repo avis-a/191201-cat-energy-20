@@ -9,8 +9,6 @@
   padding-right: 19px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     height: 84px;
     padding-left: 71px;
@@ -18,11 +16,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
-    height: 201px;
+    width: 403px;
+    height: 151px;
     background-color: @basic_white;
-    padding-left: 76px;
+    padding-top: 28px;
     padding-right: 89px;
+    position: absolute;
+    left: 110px;
+    top: 95px;
+    z-index: 1;
   }
 }
 
