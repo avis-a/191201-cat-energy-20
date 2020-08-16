@@ -13,7 +13,6 @@
 .relatived-products__title {
   .text(24px, 24px);
   .font-normal();
-  padding-left: 19px;
   padding-bottom: 81px;
 }
 
@@ -28,15 +27,11 @@
 .relatived-products__list {
   margin: 0;
   padding: 0;
+  list-style: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    min-width: 896px;
-    padding-right: 79px;
+    width: 100%;
   }
-}
-
-.relatived-products__item {
-  list-style: none;
 }
