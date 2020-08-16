@@ -10,7 +10,11 @@
 .page__title {
   .text(36px, 36px);
   .font-normal();
-  padding-left: 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .text(60px, 60px);
+  }
 }
 
 .page__text {
@@ -18,6 +22,21 @@
   .font-normal();
   color: @basic_black;
   text-transform: uppercase;
+  padding-right: 50px;
+  margin-top: 37px;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    .text(20px, 30px);
+    padding-right: 350px;
+    margin-top: 54px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 840px;
+    margin-top: 56px;
+  }
 }
 
 .page__header {
@@ -25,8 +44,13 @@
   .text(20px; 20px);
 
   @media (min-width: @tablet-width) {
+    height: 141px;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 187px;
   }
 }
 
@@ -52,5 +76,6 @@
 
   @media (min-width: @desktop-width) {
     height: 549px;
+    position: relative;
   }
 }
