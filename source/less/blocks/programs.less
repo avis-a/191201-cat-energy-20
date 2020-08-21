@@ -1,25 +1,55 @@
 .programs {
-  height: 600px;
+  min-height: 600px;
+  margin-top: 22px;
 
   @media (min-width: @tablet-width) {
-    height: 372px;
+    min-height: 772px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    min-height: 374px;
   }
 }
 
 .programs__slim {
+  margin-bottom: 20px;
+  
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-right: 80px;
+    margin-bottom: 0;
+  }
+}
+
+.programs__title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 73px;
+    text-align: center;
   }
 }
 
 .programs__slim,
 .programs__pro {
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 53px;
+  }
 }
 
 .programs__title {
@@ -32,12 +62,38 @@
   .text(14px; 18px);
   font-family: @text-font;
   color: @special_dark-grey;
+  margin-top: 0;
+  margin-bottom: 23px;
+  padding-left: 20px;
+  padding-right: 33px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .programs__button {
   .text(16px; 16px);
   .font-normal();
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   color: @basic_black;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  border-top: 1px solid @border_info;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 53px;
+    border: none;
+  }
 }

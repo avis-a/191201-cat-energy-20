@@ -1,14 +1,16 @@
 .info {
-  height: 480px;
+  min-height: 480px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   color: @basic_white;
 
   @media (min-width: @tablet-width) {
-    height: 810px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
+    min-height: 664px;
+    background-image: none;
+    // background-image: url("../img/index-can-tablet@1x.jpg");
+    // background-repeat: no-repeat;
     color: @basic_black;
+    padding-left: 87px;
   }
 }
 
@@ -16,10 +18,16 @@
   .text(36px, 36px);
   .font-normal();
   text-align: center;
+  padding-top: 27px;
+  margin-bottom: 25px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     .text(60px, 60px);
+    width: 414px;
     text-align: start;
+    padding-top: 62px;
+    margin-bottom: 41px;
   }
 }
 
@@ -28,13 +36,20 @@
   .font-normal();
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     .text(20px, 20px);
     text-align: start;
+    margin-bottom: 49px;
   }
 }
 
 .info__button {
   .text(14px, 18px);
+
+  @media (min-width: @tablet-width) {
+   margin: 0;
+  }
 }

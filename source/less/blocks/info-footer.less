@@ -2,10 +2,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 150px;
+    min-height: 150px;
+    box-sizing: border-box;
+    background-color: @basic_grey;
   }
 
   @media (min-width: @desktop-width) {
-    height: 149px;
+    min-height: 149px;
   }
 }

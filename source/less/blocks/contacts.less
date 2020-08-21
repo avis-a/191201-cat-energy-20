@@ -5,21 +5,21 @@
   background-color: @basic_grey;
   padding-top: 28px;
   padding-bottom: 22px;
-  // padding-left: 19px;
-  // padding-right: 19px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
-    height: 84px;
+    height: 201px;
     padding-left: 41px;
     padding-right: 41px;
+    padding-top: 65px;
+    padding-bottom: 55px;
+    background-color: @basic_white;
   }
 
   @media (min-width: @desktop-width) {
-    width: 403px;
-    height: 151px;
-    background-color: @basic_white;
-    padding-top: 28px;
+    width: 570px;
+    padding-top: 62px;
     padding-left: 76px;
     padding-right: 89px;
     position: absolute;
@@ -46,4 +46,5 @@
   .text(14px; 20px);
   font-family: @text-font;
   color: @special_dark-grey;
+  margin: 0;
 }

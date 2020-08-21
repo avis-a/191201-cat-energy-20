@@ -1,6 +1,13 @@
 .range {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .range__text {
@@ -8,4 +15,20 @@
   .font-normal();
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted @border_dotted;
+  }
+}
+
+.range__input {
+  @media (min-width: @tablet-width) {
+    width: 428px;
+  }
+}
+
+.range__input input {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
