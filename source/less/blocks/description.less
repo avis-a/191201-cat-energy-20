@@ -13,7 +13,7 @@
 .description__title {
   .text(36px, 40px);
   .font-normal();
-  margin-top: 27px;
+  margin-top: 26px;
   margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
@@ -31,6 +31,7 @@
   padding: 0;
   margin: 0;
   color: @special_dark-grey;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     min-height: 676px;
@@ -51,10 +52,91 @@
   min-height: 60px;
   font-family: @text-font;
   list-style: none;
-  // margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding-left: 80px;
 
   @media (min-width: @tablet-width) {
     height: 280px;
     width: 230px;
+  }
+}
+
+.description__item::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: @basic_green;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.description__item--powder::before,
+.description__item--time::before {
+  @media (min-width: @tablet-width) {
+    left: 303px;
+  }
+}
+
+.description__item::after {
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.description__item--benefit::after {
+  background-image: url("../img/advantage-leaf@1x.png");
+  top: 14px;
+  left: 15px;
+  width: 30px;
+  height: 32px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advantage-leaf@2x.png");
+    background-size: 30px 32px;
+  }
+}
+
+.description__item--powder::after {
+  background-image: url("../img/advantage-powder@1x.png");
+  top: 93px;
+  left: 15px;
+  width: 29px;
+  height: 31px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advantage-powder@2x.png");
+    background-size: 29px 31px;
+  }
+}
+
+.description__item--food::after {
+  background-image: url("../img/advantage-dining@1x.png");
+  top: 175px;
+  left: 17px;
+  width: 23px;
+  height: 30px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advantage-dining@2x.png");
+    background-size: 23px 30px;
+  }
+}
+
+.description__item--time::after {
+  background-image: url("../img/advantage-clock@1x.png");
+  top: 253px;
+  left: 14px;
+  width: 32px;
+  height: 33px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advantage-clock@2x.png");
+    background-size: 32px 33px;
   }
 }

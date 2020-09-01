@@ -23,7 +23,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    padding-left: 33px;
+    padding-left: 36px;
     border: none;
   }
 }
@@ -41,7 +41,7 @@
   .text(20px, 20px);
   position: relative;
   display: block;
-  padding-top: 22px;
+  padding-top: 20px;
   padding-bottom: 24px;
   text-decoration: none;
   text-transform: uppercase;
@@ -50,12 +50,28 @@
   border-bottom: 1px solid @border_header;
 
   @media (min-width: @tablet-width) {
+    .text(18px, 24px);
+    font-weight: 400;
     border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text(20px, 30px);
   }
 }
 
 .container.site-list__container {
   @media (max-width: @mobile-width) {
     padding: 0 0;
+  }
+
+  @media (min-width: @tablet-width) {
+   padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 79px;
   }
 }

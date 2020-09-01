@@ -1,5 +1,5 @@
 .relatived-products {
-  min-height: 966px;
+  min-height: 914px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -18,10 +18,18 @@
   display: inline-block;
   background: @basic_white;
   margin: 0;
+  margin-bottom: 24px;
   transform: translateY(-50%);
 
   @media (min-width: @tablet-width) {
     .text(36px, 36px);
+    margin-left: 36px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -45,7 +53,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: auto;
+    width: 896px;
   }
 }
 

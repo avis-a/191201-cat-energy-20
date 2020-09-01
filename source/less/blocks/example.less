@@ -55,7 +55,8 @@
   }
 }
 
-.example__img {
+.example__wrapper {
+  position: relative;
   width: 100%;
   margin: 0 auto;
 
@@ -63,10 +64,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 620px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.example__img {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example__img--after {
+  z-index: -1;
+  position: absolute;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    // position: relative;
   }
 }
