@@ -33,6 +33,7 @@
   background-color: @basic_grey;
 
   @media (min-width: @tablet-width) {
+    height: 372px;
     padding-left: 53px;
   }
 }
@@ -47,6 +48,7 @@
   padding-left: 91px;
 
   @media (min-width: @tablet-width) {
+    .text(36px; 36px);
     padding-top: 77px;
     padding-bottom: 24px;
     padding-left: 0;
@@ -54,7 +56,7 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 73px;
-    text-align: center;
+    padding-left: 161px;
   }
 }
 
@@ -176,13 +178,33 @@
   padding-right: 33px;
 
   @media (min-width: @tablet-width) {
+    .text(16px; 24px);
     padding-left: 0;
-    padding-right: 300px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 10px;
+  }
+}
+
+.programs__text--slim {
+  @media (min-width: @tablet-width) {
+    padding-right: 282px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 22px;
+  }
+}
+
+.programs__text--pro {
+  @media (min-width: @tablet-width) {
+    padding-right: 314px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 22px;
   }
 }
 
@@ -200,6 +222,7 @@
   border-top: 1px solid @border_info;
 
   @media (min-width: @tablet-width) {
+    .text(20px; 30px);
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 53px;
