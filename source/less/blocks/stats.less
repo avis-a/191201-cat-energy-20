@@ -40,7 +40,7 @@
   border-radius: 5%;
 
   @media (min-width: @tablet-width) {
-    width: 162px;
+    width: 160px;
   }
 }
 
@@ -52,12 +52,17 @@
   .text(24px, 24px);
   .font-normal();
   text-transform: uppercase;
-  padding-top: 13px;
-  padding-bottom: 7px;
+  padding-top: 16px;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     .text(30px, 42px);
-    padding-bottom: 5px;
+    padding-top: 14px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 

@@ -2,7 +2,7 @@
   min-height: 480px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 320px auto;
+  background-size: 100% auto;
   background-position: center 0;
   color: @basic_white;
 
@@ -74,16 +74,20 @@
 }
 
 .info__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   @media (min-width: @tablet-width) {
     order: 0;
-    position: relative;
-    bottom: 21px;
-    right: 39px;
+    position: absolute;
+    bottom: 3px;
+    right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 368px;
-    left: 368px;
+    bottom: 136px;
+    left: 558px;
     right: unset;
   }
 }

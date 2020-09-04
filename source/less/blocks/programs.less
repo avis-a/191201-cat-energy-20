@@ -173,24 +173,27 @@
   font-family: @text-font;
   color: @special_dark-grey;
   margin-top: 0;
-  margin-bottom: 23px;
-  padding-left: 20px;
-  padding-right: 33px;
+  margin-bottom: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @border_info;
 
   @media (min-width: @tablet-width) {
     .text(16px; 24px);
-    padding-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
+    margin-left: 0;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 
 .programs__text--slim {
   @media (min-width: @tablet-width) {
-    padding-right: 282px;
+    padding-right: 262px;
   }
 
   @media (min-width: @desktop-width) {
@@ -200,7 +203,7 @@
 
 .programs__text--pro {
   @media (min-width: @tablet-width) {
-    padding-right: 314px;
+    padding-right: 295px;
   }
 
   @media (min-width: @desktop-width) {
@@ -211,26 +214,32 @@
 .programs__button {
   .text(16px; 16px);
   .font-normal();
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: @basic_black;
   margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 17px;
-  padding-bottom: 24px;
-  border-top: 1px solid @border_info;
+  margin-bottom: 21px;
+  padding-right: 40px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     .text(20px; 30px);
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 53px;
-    border: none;
+    padding-right: 50px;
   }
 }
 
 .programs__button svg {
-  width: 47px;
-  height: 10px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 25px;
+  height: 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+  }
 }

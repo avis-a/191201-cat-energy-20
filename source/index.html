@@ -10,8 +10,8 @@
 
 <body class="page page__index">
 
-  <header class="page__header">
-    <a class="page__logo container container__logo" href="index.html">
+  <header class="page__header container">
+    <a class="page__logo" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
@@ -22,7 +22,7 @@
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav__wrapper container site-list__container">
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link site-list__link-index" href="#">Главная</a>
@@ -119,47 +119,53 @@
       <div class="container">
         <div class="example__container">
           <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <div class="example__info">
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-              Slim.
-              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-              часов
-              в день.</p>
-            <div class="example__stats stats">
-              <div class="stats__info">
-                <dl class="stats__list">
-                  <div class="stats__item">
-                    <dt class="stats__number">5 кг</dt>
-                    <dd class="stats__text">Снижение веса</dd>
+            <h2 class="example__title">Живой пример</h2>
+            <div class="example__info">
+              <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+                Slim.
+                Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+                16
+                часов
+                в день.</p>
+              <div class="example__stats stats">
+                <div class="stats__info">
+                  <dl class="stats__list">
+                    <div class="stats__item">
+                      <dt class="stats__number">5 кг</dt>
+                      <dd class="stats__text">Снижение веса</dd>
+                    </div>
+                    <div class="stats__item">
+                      <dt class="stats__number">60 дней</dt>
+                      <dd class="stats__text">Затрачено времени</dd>
+                    </div>
+                  </dl>
+                  <div class="stats__sum">
+                    <p class="stats__total">Затраты на питание: <span class="stats__amount">15 000 РУБ.</span></p>
                   </div>
-                  <div class="stats__item">
-                    <dt class="stats__number">60 дней</dt>
-                    <dd class="stats__text">Затрачено времени</dd>
-                  </div>
-                </dl>
-                <div class="stats__sum">
-                  <p class="stats__total">Затраты на питание: <span class="stats__amount">15 000 РУБ.</span></p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
           <div class="example__wrap">
             <div class="example__img">
-              <picture>
-                <source media="(min-width: 1440px)"
-                  srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x">
-                <img class="example__img--before" src="./img/before-mobile@1x.png"
-                  srcset="./img/before-mobile@2x.png 2x" alt="Изменения кота до курса питания">
-              </picture>
-              <picture>
-                <source media="(min-width: 1440px)" srcset="./img/after-desktop@1x.png, ./img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png, /img/after-tablet@2x.png 2x">
-                <img class="example__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x"
-                  alt="Изменения кота после курса питания">
-              </picture>
+              <div class="example__before">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x">
+                  <img class="example__img--before" src="./img/before-mobile@1x.png"
+                    srcset="./img/before-mobile@2x.png 2x" alt="Изменения кота до курса питания">
+                </picture>
+              </div>
+              <div class="example__after">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="./img/after-desktop@1x.png, ./img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png, /img/after-tablet@2x.png 2x">
+                  <img class="example__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x"
+                    alt="Изменения кота после курса питания">
+                </picture>
+              </div>
             </div>
             <div class="range">
               <button class="range__text range__text--before" type="button">Было</button>
@@ -177,7 +183,8 @@
   <footer class="page__footer">
     <div class="contacts container">
       <div class="contacts__wrapper">
-        <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+        <b class="contacts__title">Приглашаем
+          к сотрудничеству дилеров!</b>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8
 
           Санкт-Петербург</p>
@@ -276,7 +283,8 @@
           </a>
         </li>
       </ul>
-      <p class="copyright">HTML Academy
+      <p class="copyright">
+        <span class="copyright__text">HTML Academy</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
             <path fill="#2E368F"

@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -42,17 +43,21 @@
 
 .gift__img {
   margin-bottom: 39px;
+  position: absolute;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 14px;
     margin-left: 88px;
-    padding-right: 275px;
+    left: 0;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-bottom: 47px;
     padding-right: 0;
+    left: unset;
+    top: 50px;
   }
 }
 
@@ -73,14 +78,18 @@
   text-align: center;
   margin: 0;
   width: 161px;
+  padding-top: 144px;
 
   @media (min-width: @tablet-width) {
     text-align: start;
-    margin-right: 124px;
+    padding-top: 0;
+    padding-left: 300px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
     margin-right: 0;
+    padding-left: 0;
+    padding-top: 138px;
   }
 }
