@@ -1,15 +1,30 @@
 .card {
-  height: 190px;
+  min-height: 209px;
   list-style: none;
+  border-bottom: 1px solid @special_grey-2;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: 324px;
-    height: 430px;
+    min-height: 511px;
+    padding-top: 0;
+    border: none;
+    background: linear-gradient(to top, @basic_grey 430px, @basic_white 68px);
+    vertical-align: bottom;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 245px;
-    height: 431px;
+.card__wrapper {
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img desc";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 60px);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -18,12 +33,94 @@
   .font-normal();
   color: @special_dark-grey-2;
   text-transform: uppercase;
-  text-align: center;
+  margin: 0;
+  grid-area: title;
+  width: 76px;
+  margin-top: 19px;
+
+  @media (min-width: @tablet-width) {
+    .text(20px, 24px);
+    order: 2;
+    width: 130px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 29px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text(20px, 21px);
+  }
+}
+
+.card__item {
+  @media (min-width: @tablet-width) {
+    height: 213px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.card__desc {
+  grid-area: desc;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+
+.card__info {
+  @media (min-width: @tablet-width) {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }
 
 .card__text {
   .text(12px, 16px);
   font-family: @text-font;
   color: @special_dark-grey;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    .text(16px, 16px);
+    border-bottom: 1px solid @line_color;
+    padding-bottom: 9px;
+    margin-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+  }
+}
+
+.card__info:nth-child(2) > p,
+.card__info:nth-child(3) > p {
+  margin-top: -12px;
+}
+
+.card__button {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+  }
+}
+
+.card__img {
+  width: 140px;
+  grid-area: img;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0 auto;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }

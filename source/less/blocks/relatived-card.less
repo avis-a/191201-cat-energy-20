@@ -1,7 +1,33 @@
-.relatived-card__text {
+.relatived-card {
+  border-bottom: 1px solid @line_color;
+
   @media (min-width: @tablet-width) {
     border: 1px solid @line_color;
     border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid @line_color;
+  }
+}
+
+.relatived-card:nth-child(1) {
+  border-top: 1px solid @line_color;
+}
+
+.relatived-card:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @line_color;
+  }
+}
+
+.relatived-card__text {
+  padding-top: 13px;
+  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 37px;
@@ -12,18 +38,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 16px;
     padding-right: 0;
     padding-left: 0;
-    border: 1px solid @line_color;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-  }
-}
-
-.relatived-card:nth-child(4) {
-  @media (min-width: @tablet-width) {
-    border-bottom: 1px solid @line_color;
   }
 }
 
@@ -32,6 +51,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .relatived-card__title {
@@ -41,9 +69,17 @@
   text-transform: uppercase;
   display: block;
   width: 100%;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    width: 280px;
+    .text(20px, 20px);
+    width: 50%;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 47%;
   }
 }
 
@@ -53,11 +89,39 @@
   font-family: @text-font;
   color: @special_dark-grey;
   margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    .text(16px, 20px);
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
 }
 
 .relatived-card__unit {
+  @media (min-width: @tablet-width) {
+    width: 35%;
+    text-align: end;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 244px;
+    text-align: start;
+  }
+}
+
+.relatived-card__price {
+  @media (min-width: @tablet-width) {
+    width: 13%;
+    text-align: end;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: unset;
   }
 }
 
@@ -65,7 +129,6 @@
   width: 100%;
 
   @media (min-width: @desktop-width) {
-    width: 244px;
-    margin: 0;
+    width: 336px;
   }
 }

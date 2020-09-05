@@ -1,14 +1,33 @@
 .info {
-  height: 480px;
+  min-height: 480px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center 0;
   color: @basic_white;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
-    height: 810px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
+    height: 872px;
+    background-image: none;
     color: @basic_black;
+    padding-left: 87px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 589px;
+    padding-left: 159px;
+  }
+}
+
+.info__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -16,10 +35,21 @@
   .text(36px, 36px);
   .font-normal();
   text-align: center;
+  padding-top: 27px;
+  margin-bottom: 25px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     .text(60px, 60px);
+    width: 414px;
     text-align: start;
+    padding-top: 62px;
+    margin-bottom: 41px;
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 36px;
   }
 }
 
@@ -28,13 +58,50 @@
   .font-normal();
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     .text(20px, 20px);
     text-align: start;
+    margin-bottom: 49px;
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.info__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    position: absolute;
+    bottom: 3px;
+    right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 136px;
+    left: 558px;
+    right: unset;
   }
 }
 
 .info__button {
   .text(14px, 18px);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin: 0;
+    width: 244px;
+    height: 54px;
+    padding-top: 14px;
+    order: -1;
+    z-index: 2;
+  }
 }

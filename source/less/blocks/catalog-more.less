@@ -1,7 +1,41 @@
 .catalog-more {
   text-align: center;
+  padding-top: 79px;
+  position: relative;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    min-height: 429px;
+    background: none;
+  }
+}
+
+.catalog-more::before {
+  position: absolute;
+  content: "";
+  left: 45.3%;
+  top: 12.4%;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' style='enable-background:new 0 0 30 30;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0 %7B fill: %23D3D3D3; %7D %3C/style%3E%3Cpolygon class='st0' points='30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 '/%3E%3C/svg%3E%0A");
+
+  @media (min-width: @tablet-width) {
+    left: 40.7%;
+    top: 26.1%;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' style='enable-background:new 0 0 30 30;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0 %7B fill: %23D3D3D3; %7D %3C/style%3E%3Cpolygon class='st0' points='30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 '/%3E%3C/svg%3E%0A");
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 37.7%;
+  }
+}
+
+.catalog-more__wrapper {
+  @media (min-width: @tablet-width) {
+    padding-top: 161px;
+    padding-bottom: 38px;
     border: 2px solid @basic_grey;
   }
 
@@ -15,12 +49,31 @@
   .font-normal();
   color: @special_black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .text(20px, 22px);
+    display: block;
+    width: 134px;
+    margin: 0 auto;
+  }
 }
 
 .catalog-more__text {
   .text(12px, 16px);
   font-family: @text-font;
   color: @special_dark-grey;
+  margin-top: 8px;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    .text(16px, 18px);
+    display: block;
+    width: 167px;
+    margin-top: 23px;
+    margin-bottom: 87px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .catalog-more__button {

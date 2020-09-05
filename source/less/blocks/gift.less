@@ -1,20 +1,73 @@
 .gift {
-  height: 363px;
+  min-height: 366px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100% auto;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
-    height: 345px;
+    min-height: 345px;
+    flex-direction: row;
+    align-items: center;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    margin-left: 60px;
+    flex-direction: column;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.gift__img {
+  margin-bottom: 39px;
+  position: absolute;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 14px;
+    margin-left: 88px;
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 47px;
+    padding-right: 0;
+    left: unset;
+    top: 50px;
+  }
+}
+
+.gift__img svg {
+  width: 60px;
+  height: 60px;
+  fill: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    height: 83px;
   }
 }
 
@@ -23,4 +76,20 @@
   font-family: @text-font;
   color: @basic_white;
   text-align: center;
+  margin: 0;
+  width: 161px;
+  padding-top: 144px;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    padding-top: 0;
+    padding-left: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    margin-right: 0;
+    padding-left: 0;
+    padding-top: 138px;
+  }
 }

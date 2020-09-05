@@ -1,6 +1,18 @@
 .range {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 52px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-top: 35px;
+  }
 }
 
 .range__text {
@@ -8,4 +20,33 @@
   .font-normal();
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    .text(20px; 30px);
+    border-bottom: 1px dotted @border_dotted;
+  }
+}
+
+.range__text--before {
+  @media (min-width: @tablet-width) {
+    margin-right: 14px;
+  }
+}
+
+.range__text--after {
+  @media (min-width: @tablet-width) {
+    margin-left: 11px;
+  }
+}
+
+.range__input {
+  @media (min-width: @tablet-width) {
+    width: 428px;
+  }
+}
+
+.range__input input {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }

@@ -1,3 +1,23 @@
-.fake {
-  color: black;
+.logo {
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @border_info;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    padding-top: 59px;
+    padding-bottom: 57px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 63px;
+    padding-bottom: 0;
+  }
+}
+
+.logo svg {
+  width: 128px;
+  height: 24px;
 }
