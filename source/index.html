@@ -23,7 +23,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--index">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link site-list__link-index" href="#">Главная</a>
           </li>
@@ -109,8 +109,7 @@
             функциональное питание.</p>
         </li>
         <li class="description__item description__item--time">
-          <p class="description__text">Уже через месяц наслаждайтесь
-            изменениями к лучшему вашего питомца!</p>
+          <p class="description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
     </section>
@@ -170,7 +169,8 @@
             <div class="range">
               <button class="range__text range__text--before" type="button">Было</button>
               <div class="range__input">
-                <input type="range">
+                <div class="range__scale"></div>
+                <button class="range__toggle" type="button" aria-label="Изменения кота"></button>
               </div>
               <button class="range__text range__text--after" type="button">Стало</button>
             </div>

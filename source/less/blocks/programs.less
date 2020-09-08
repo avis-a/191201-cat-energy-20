@@ -73,7 +73,7 @@
 
   @media (min-width: @tablet-width) {
     width: 200px;
-    height: 211px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -242,4 +242,23 @@
   @media (min-width: @tablet-width) {
     top: 8px;
   }
+}
+
+.programs__button:hover {
+  transition-property: right;
+  transition-duration: 2s;
+}
+
+.programs__button:hover::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 2px;
+  background-color: @basic_black;
+  top: 13px;
+  left: 120px;
+}
+
+.programs__button:active {
+  opacity: 0.3;
 }

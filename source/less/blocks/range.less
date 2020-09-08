@@ -2,16 +2,17 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 52px;
+  margin-top: 55px;
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 18px;
+    margin-top: 22px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    margin-top: 35px;
+    margin-top: 40px;
+    margin-left: 115px;
   }
 }
 
@@ -20,33 +21,110 @@
   .font-normal();
   text-transform: uppercase;
   border: none;
+  background-color: transparent;
+  margin-top: -4px;
 
   @media (min-width: @tablet-width) {
     .text(20px; 30px);
     border-bottom: 1px dotted @border_dotted;
+    margin-top: -12px;
   }
 }
 
+.range__text:hover {
+  border-bottom: 1px solid @hover_color;
+}
+
+.range__text:active {
+  border-bottom: none;
+}
+
 .range__text--before {
+  margin-right: 15px;
+
   @media (min-width: @tablet-width) {
-    margin-right: 14px;
+    margin-right: 22px;
   }
 }
 
 .range__text--after {
+  margin-left: 10px;
+
   @media (min-width: @tablet-width) {
     margin-left: 11px;
   }
 }
 
 .range__input {
+  position: relative;
+}
+
+.range__scale {
+  width: 84px;
+  height: 12px;
+  background: @basic_white;
+  border: 1px solid @line_color;
+  border-radius: 6px;
+
   @media (min-width: @tablet-width) {
     width: 428px;
+    height: 6px;
+    background: @range_color;
   }
 }
 
-.range__input input {
+.range__toggle {
+  width: 35px;
+  height: 6px;
+  background-color: @basic_green;
+  border-color: transparent;
+  border-radius: 6px;
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid @line_color;
+    border-radius: 50%;
+    background-color: @basic_white;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    box-sizing: content-box;
+    top: -11px;
+    left: 193px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -14px;
+    left: 196px;
+  }
+}
+
+.range__toggle::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @basic_green;
+    top: 13px;
+    left: 13px;
+  }
+}
+
+.range__toggle:hover {
+  @media (min-width: @tablet-width) {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+}
+
+.range__toggle:active {
+  @media (min-width: @tablet-width) {
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    border-color: @basic_green;
   }
 }

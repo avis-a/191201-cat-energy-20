@@ -1,26 +1,31 @@
 .gift {
-  min-height: 366px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
+  padding-top: 188px;
+  padding-bottom: 42px;
+  margin-top: 38px;
+  margin-bottom: 36px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 345px;
     flex-direction: row;
     align-items: center;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 68px;
+    margin-bottom: 75px;
+    padding-top: 71px;
+    padding-bottom: 69px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -28,12 +33,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 60px;
     flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
@@ -42,14 +50,16 @@
 }
 
 .gift__img {
-  margin-bottom: 39px;
   position: absolute;
+  width: 100%;
   text-align: center;
+  top: 66px;
+  left: 0;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 14px;
-    margin-left: 88px;
-    left: 0;
+    top: 53px;
+    left: -237px;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,18 +88,17 @@
   text-align: center;
   margin: 0;
   width: 161px;
-  padding-top: 144px;
 
   @media (min-width: @tablet-width) {
     text-align: start;
     padding-top: 0;
-    padding-left: 300px;
+    padding-left: 420px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
     margin-right: 0;
     padding-left: 0;
-    padding-top: 138px;
+    padding-top: 185px;
   }
 }
