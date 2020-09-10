@@ -73,7 +73,7 @@
 
   @media (min-width: @tablet-width) {
     width: 200px;
-    height: 211px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -242,4 +242,39 @@
   @media (min-width: @tablet-width) {
     top: 8px;
   }
+}
+
+.programs__button::after {
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 12px;
+  top: 1px;
+  right: 1px;
+
+  @media (min-width: @tablet-width) {
+    top: 9px;
+  }
+}
+
+.programs__button:hover::before,
+.programs__button:active::before {
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 12px;
+  top: 1px;
+  right: 1px;
+
+  @media (min-width: @tablet-width) {
+    top: 9px;
+  }
+}
+
+.programs__button:active {
+  opacity: 0.3;
 }
