@@ -46,6 +46,9 @@
   .text(24px, 26px);
   .font-normal();
   margin: 0;
+  padding-right: 23px;
+  padding-left: 20px;
+  margin-left: -20px;
   position: relative;
   display: inline-block;
   background: @basic_white;
@@ -53,12 +56,19 @@
 
   @media (min-width: @tablet-width) {
     .text(36px, 36px);
-    padding-left: 39px;
+    padding-left: 40px;
+    margin-left: 0;
+    padding-right: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 0;
-    padding-right: 38px;
+    margin-left: -40px;
+  }
+}
+
+.form__title--contact {
+  @media (max-width: @only-mobile-width) {
+    width: 181px;
   }
 }
 
@@ -155,6 +165,7 @@
 
 .form__row--contacts {
   margin-top: 7px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-top: 58px;
@@ -177,10 +188,13 @@
   }
 }
 
+.form__control--contacts {
+  position: relative;
+}
+
 .form__label--contacts {
   margin-right: 10px;
   text-align: center;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-right: 20px;
@@ -197,28 +211,21 @@
   position: absolute;
   width: 20px;
   height: 14px;
-  right: 35px;
+  right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 84px;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 778px;
+    right: 20px;
   }
 }
 
 .form__img--tel {
   position: absolute;
+  width: 20px;
   height: 20px;
-  right: 35px;
+  right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 84px;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 126px;
+    right: 20px;
   }
 }
 
@@ -232,7 +239,6 @@
   color: @special_dark-grey-2;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
     padding-right: 0;
     padding-top: 30px;
     padding-bottom: 5px;
@@ -243,6 +249,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    padding-left: 22px;
   }
 }
 
@@ -254,6 +261,10 @@
     padding-left: 47px;
     margin-bottom: 23px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+  }
 }
 
 .form__label--radio {
@@ -263,7 +274,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-left: 20px;
+    padding-left: 19px;
   }
 }
 
@@ -341,16 +352,17 @@
 }
 
 .form__list--checkbox {
-  margin-bottom: 44px;
+  margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 24px;
   }
@@ -359,45 +371,30 @@
 .form__row--checkbox {
   color: @basic_black;
   margin-bottom: 23px;
-  padding-left: 16px;
+  padding-left: 30px;
 
   @media (min-width: @tablet-width) {
+    margin-right: 98px;
+    width: 205px;
+    margin-bottom: 39px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    margin-right: 80px;
+  }
+}
+
+.form__row--checkbox:nth-child(2n) {
+  @media (max-width: @tablet-width) {
     margin-right: 0;
-    margin-bottom: 43px;
-    padding-left: 19px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-right: 90px;
   }
 }
 
-.form__row--checkbox:nth-child(2),
-.form__row--checkbox:nth-child(4) {
-  @media (min-width: @tablet-width) {
-    padding-left: 48px;
-  }
-
+.form__row--checkbox:nth-child(4n) {
   @media (min-width: @desktop-width) {
-    padding-left: 0;
-  }
-}
-
-.form__row--checkbox:nth-child(1) {
-  @media (min-width: @desktop-width) {
-    padding-right: 125px;
-  }
-}
-
-.form__row--checkbox:nth-child(2) {
-  @media (min-width: @desktop-width) {
-    padding-right: 139px;
-  }
-}
-
-.form__row--checkbox:nth-child(3) {
-  @media (min-width: @desktop-width) {
-    padding-right: 219px;
+    margin-right: 0;
   }
 }
 
@@ -406,11 +403,6 @@
   user-select: none;
   cursor: pointer;
   position: relative;
-  padding-left: 16px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 19px;
-  }
 }
 
 .form__label--checkbox::before {
@@ -420,17 +412,14 @@
   background-color: @basic_white;
   position: absolute;
   content: "";
-  left: -32px;
-  top: -5px;
+  left: -48px;
+  top: -8px;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    left: -41px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: -40px;
+    left: -61px;
+    top: -8px;
   }
 }
 
@@ -440,18 +429,18 @@
   width: 16px;
   height: 14px;
   position: absolute;
-  left: -23px;
-  bottom: 1px;
+  left: -37px;
+  bottom: 3px;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%2368B738' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    left: -28px;
-    bottom: 5px;
+    left: -48px;
+    bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
-    left: -26px;
+    left: -48px;
   }
 }
 
@@ -498,8 +487,8 @@
   @media (min-width: @tablet-width) {
     .text(16px, 16px);
     text-align: start;
-    margin-left: 30px;
-    margin-top: 15px;
+    margin-left: 31px;
+    margin-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -510,11 +499,11 @@
 
 // effects
 
-.form__img:active {
+.form__control--contacts:focus ~ svg path {
   fill: @basic_green;
 }
 
-.form__img:invalid {
+.form__row--contacts:invalid ~ svg path {
   fill: @error_color;
 }
 
@@ -523,12 +512,12 @@
   border-color: @line_color;
 }
 
-.form__control--text:active,
-.form__control--contacts:active {
+.form__control--text:focus,
+.form__control--contacts:focus {
   border: 2px solid @special_dark-grey;
 }
 
-.form__control--text:invalid,
+.form__control--text:invalid:not([name="age"]),
 .form__control--contacts:invalid {
   border: 2px solid @error_color;
 }

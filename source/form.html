@@ -92,14 +92,14 @@
         <fieldset class="form__fieldset form__fieldset--contacts">
           <div class="form__title-wrapper">
             <div class="container">
-              <h2 class="form__title">Контактные данные (владельца кота)</h2>
+              <h2 class="form__title form__title--contact">Контактные данные (владельца кота)</h2>
             </div>
           </div>
           <div class="form__block-wrapper form__block-wrapper--contacts form__wrapper container">
             <p class="form__row form__row--contacts">
               <label class="form__label form__label--contacts form__label--email" for="email">E-mail&#58;&#42;</label>
-              <input class="form__control form__control--contacts " id="email" type="email" name="email"
-                placeholder="kuklachev@gmail.com">
+              <input class="form__control form__control--contacts form__control--email" id="email" type="email"
+                name="email" placeholder="kuklachev@gmail.com">
               <svg class="form__img form__img--email" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13"
                 style="enable-background:new 0 0 17 13;" xml:space="preserve">
@@ -133,7 +133,7 @@
           </div>
           <div class="form__block-wrapper container">
             <textarea class="form__control form__control--textarea"
-              name="comment">Расскажите обо всех повадках кота</textarea>
+              name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
 
@@ -279,7 +279,8 @@
           </a>
         </li>
       </ul>
-      <p class="copyright">HTML Academy
+      <p class="copyright">
+        <span class="copyright__text">HTML Academy</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
             <path fill="#2E368F"
