@@ -13,10 +13,25 @@
 }
 
 .example__container {
+  @media (max-width: @only-mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 620px;
+  }
+}
+
+.example__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -76,7 +91,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 31px;
+    padding-top: 27px;
     margin-right: -14px;
   }
 
