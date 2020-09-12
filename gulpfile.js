@@ -11,21 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const htmlreplace = require('gulp-html-replace');
 
 // Styles
-const stylesWithoutMin = () => {
-  return gulp.src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(rename("styles.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
 const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -34,6 +21,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(rename("styles.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -47,7 +36,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -60,7 +49,7 @@ exports.server = server;
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(stylesWithoutMin));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(copy));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
@@ -112,17 +101,6 @@ const copy = () => {
 
 exports.copy = copy;
 
-// Replace
-const replace = () => {
-  return gulp.src('build/*.html')
-    .pipe(htmlreplace({
-        'css': 'css/styles.min.css'
-    }))
-    .pipe(gulp.dest('build'));
-};
-
-exports.replace = replace;
-
 // Delete
 const clean = () => {
   return del("build");
@@ -134,16 +112,14 @@ exports.clean = clean;
 const build = gulp.series (
   clean,
   styles,
-  stylesWithoutMin,
   images,
   createWebp,
   sprite,
-  copy,
-  replace
+  copy
 );
 
 exports.build = build;
 
 exports.default = gulp.series(
-  clean, stylesWithoutMin, copy, server, watcher
+  build, server, watcher
 );
