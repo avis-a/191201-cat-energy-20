@@ -29,14 +29,14 @@
     border-bottom: 1px dotted @border_dotted;
     margin-top: -12px;
   }
-}
 
-.range__text:hover {
-  border-bottom: 1px solid @hover_color;
-}
+  &:hover {
+    border-bottom: 1px solid @hover_color;
+  }
 
-.range__text:active {
-  border-bottom: none;
+  &:active {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .range__text--before {
@@ -101,30 +101,30 @@
     top: -14px;
     left: 196px;
   }
-}
 
-.range__toggle::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: @basic_green;
-    top: 13px;
-    left: 13px;
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @basic_green;
+      top: 13px;
+      left: 13px;
+    }
   }
-}
 
-.range__toggle:hover {
-  @media (min-width: @tablet-width) {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  &:hover {
+    @media (min-width: @tablet-width) {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
   }
-}
 
-.range__toggle:active {
-  @media (min-width: @tablet-width) {
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-    border-color: @basic_green;
+  &:active {
+    @media (min-width: @tablet-width) {
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      border-color: @basic_green;
+    }
   }
 }

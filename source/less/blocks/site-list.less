@@ -58,19 +58,20 @@
   @media (min-width: @desktop-width) {
     .text(20px, 30px);
   }
-}
 
-.site-list__link:hover {
-  @media (min-width: @tablet-width) {
-    opacity: 0.6;
+  &:hover {
+    @media (min-width: @tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      opacity: 0.3;
+    }
   }
 }
 
-.site-list__link:active {
-  @media (min-width: @desktop-width) {
-    opacity: 0.3;
-  }
-}
 
 .site-list__item--active {
   @media (min-width: @tablet-width) {

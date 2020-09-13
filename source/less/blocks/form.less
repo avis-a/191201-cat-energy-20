@@ -1,10 +1,9 @@
 .form__wrapper {
   @media (min-width: @desktop-width) {
-    height: 200px;
+    min-height: 195px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 78px;
-    padding-bottom: 83px;
   }
 }
 
@@ -113,11 +112,6 @@
 
 // text + contacts
 
-.form__label--text {
-  margin-right: 15px;
-  text-align: center;
-}
-
 .form__control--text,
 .form__control--contacts {
   width: 150px;
@@ -130,6 +124,11 @@
 }
 
 // text
+
+.form__label--text {
+  margin-right: 15px;
+  text-align: center;
+}
 
 .form__fieldset--text {
   padding-right: 20px;
@@ -146,7 +145,7 @@
 
 .form__fieldset--contacts {
   padding-top: 0;
-  padding-bottom: 27px;
+  padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 62px;
@@ -173,7 +172,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    margin-bottom: 34px;
+    margin-bottom: 40px;
     padding: 0;
   }
 }
@@ -190,6 +189,8 @@
 
 .form__control--contacts {
   position: relative;
+  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .form__label--contacts {
@@ -233,6 +234,7 @@
 
 .form__list--radio {
   padding-top: 25px;
+  padding-left: 20px;
   margin-bottom: 50px;
   border-top: 1px solid @border_info;
   border-bottom: 1px solid @border_info;
@@ -254,7 +256,7 @@
 }
 
 .form__row--radio {
-  padding-left: 50px;
+  padding-left: 46px;
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
@@ -269,6 +271,25 @@
 
 .form__control--radio {
   padding-left: 0;
+
+  &:checked + .form__label--radio::after {
+    content: "";
+    display: block;
+    width: 13.5px;
+    height: 13.5px;
+    position: absolute;
+    left: -37px;
+    bottom: 3px;
+    background-color: @basic_green;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+      left: -29px;
+      bottom: 7px;
+    }
+  }
 }
 
 .form__label--radio {
@@ -280,43 +301,24 @@
   @media (min-width: @tablet-width) {
     padding-left: 19px;
   }
-}
 
-.form__label--radio::before {
-  width: 30px;
-  height: 30px;
-  border: 1px solid @line_color;
-  border-radius: 50%;
-  background-color: @basic_white;
-  position: absolute;
-  content: "";
-  left: -46px;
-  top: -8px;
+  &::before {
+    width: 30px;
+    height: 30px;
+    border: 1px solid @line_color;
+    border-radius: 50%;
+    background-color: @basic_white;
+    position: absolute;
+    content: "";
+    left: -46px;
+    top: -8px;
 
-  @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
-    left: -41px;
-    top: -7px;
-  }
-}
-
-.form__control--radio:checked + .form__label--radio::after {
-  content: "";
-  display: block;
-  width: 13.5px;
-  height: 13.5px;
-  position: absolute;
-  left: -37px;
-  bottom: 3px;
-  background-color: @basic_green;
-  border-radius: 50%;
-
-  @media (min-width: @tablet-width) {
-    width: 18px;
-    height: 18px;
-    left: -29px;
-    bottom: 7px;
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -41px;
+      top: -7px;
+    }
   }
 }
 
@@ -351,17 +353,19 @@
   margin-top: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 43px;
+    margin-top: 47px;
   }
 }
 
 .form__list--checkbox {
   margin-bottom: 41px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 19px;
+    margin-bottom: 23px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -406,6 +410,27 @@
 
 .form__control--checkbox {
   padding-left: 0;
+
+  &:checked + .form__label--checkbox::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 14px;
+    position: absolute;
+    left: -37px;
+    bottom: 3px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%2368B738' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      left: -48px;
+      bottom: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -48px;
+    }
+  }
 }
 
 .form__label--checkbox {
@@ -413,44 +438,23 @@
   user-select: none;
   cursor: pointer;
   position: relative;
-}
 
-.form__label--checkbox::before {
-  width: 30px;
-  height: 30px;
-  border: 1px solid @line_color;
-  background-color: @basic_white;
-  position: absolute;
-  content: "";
-  left: -48px;
-  top: -8px;
-
-  @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
-    left: -61px;
+  &::before {
+    width: 30px;
+    height: 30px;
+    border: 1px solid @line_color;
+    background-color: @basic_white;
+    position: absolute;
+    content: "";
+    left: -48px;
     top: -8px;
-  }
-}
 
-.form__control--checkbox:checked + .form__label--checkbox::after {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 14px;
-  position: absolute;
-  left: -37px;
-  bottom: 3px;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%2368B738' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    left: -48px;
-    bottom: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: -48px;
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -61px;
+      top: -8px;
+    }
   }
 }
 
@@ -509,11 +513,11 @@
 
 // effects
 
-.form__control--contacts:focus ~ svg path {
+.form__control--contacts:focus ~ svg {
   fill: @basic_green;
 }
 
-.form__row--contacts:invalid ~ svg path {
+.form__control--contacts:invalid ~ svg {
   fill: @error_color;
 }
 
@@ -524,7 +528,8 @@
 
 .form__control--text:focus,
 .form__control--contacts:focus {
-  border: 2px solid @special_dark-grey;
+  border-color: @special_dark-grey;
+  box-shadow: 0 0 1px @special_dark-grey;
 }
 
 .form__control--text:invalid:not([name="age"]),
