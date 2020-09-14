@@ -109,7 +109,7 @@
             <p class="form__row form__row--contacts">
               <label class="form__label form__label--contacts form__label--tel" for="tel">Телефон&#58;&#42;</label>
               <input class="form__control form__control--contacts" id="tel" type="tel" name="tel"
-                placeholder="8 (960) 900-60-90">
+                placeholder="8 (960) 900-60-90" pattern="8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
               <svg class="form__img form__img--tel" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
@@ -120,7 +120,7 @@
         <fieldset class="form__fieldset">
           <div class="form__title-wrapper">
             <div class="container">
-              <h2 class="form__title">Комментарий</h2>
+              <h2 class="form__title form__title--textarea">Комментарий</h2>
             </div>
           </div>
           <div class="form__block-wrapper container">
@@ -132,29 +132,29 @@
         <fieldset class="form__fieldset">
           <div class="form__title-wrapper">
             <div class="container">
-              <h2 class="form__title">Дополнительно</h2>
+              <h2 class="form__title form__title--checkbox">Дополнительно</h2>
             </div>
           </div>
           <div class="form__block-wrapper form__block-wrapper--checkbox container">
             <ul class="form__list form__list--checkbox">
               <li class="form__row form__row--checkbox">
                 <input class="form__control form__control--checkbox visually-hidden" name="sweetener"
-                  id="checkbox-sweetener" type="checkbox" checked hidden>
+                  id="checkbox-sweetener" type="checkbox" checked>
                 <label class="form__label form__label--checkbox" for="checkbox-sweetener">Сахарозаменитель</label>
               </li>
               <li class="form__row form__row--checkbox">
                 <input class="form__control form__control--checkbox visually-hidden" name="water" id="checkbox-water"
-                  type="checkbox" hidden>
+                  type="checkbox">
                 <label class="form__label form__label--checkbox" for="checkbox-water">Питьевая вода</label>
               </li>
               <li class="form__row form__row--checkbox">
                 <input class="form__control form__control--checkbox visually-hidden" name="milk" id="checkbox-milk"
-                  type="checkbox" hidden>
+                  type="checkbox">
                 <label class="form__label form__label--checkbox" for="checkbox-milk">Молоко</label>
               </li>
               <li class="form__row form__row--checkbox">
                 <input class="form__control form__control--checkbox visually-hidden" name="vitamins"
-                  id="checkbox-vitamins" type="checkbox" hidden>
+                  id="checkbox-vitamins" type="checkbox">
                 <label class="form__label form__label--checkbox" for="checkbox-vitamins">Витамины</label>
               </li>
             </ul>
@@ -225,6 +225,7 @@
   </footer>
 
   <script src="./js/menu.js"></script>
+  <script src="./js/form.js"></script>
 
 </body>
 
